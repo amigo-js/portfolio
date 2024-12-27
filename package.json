@@ -1,0 +1,30 @@
+{
+  "name": "P09-PortfolioFSDev",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/P09-PortfolioFSDev/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "glob": "^8.1.0",
+    "vite": "^4.5.2"
+  },
+  "author": "Viktor",
+  "license": "ISC",
+  "dependencies": {
+    "accordion": "^3.0.2",
+    "accordion-js": "^3.3.4",
+    "animate.css": "^4.1.1",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.7",
+    "emailjs-com": "^3.2.0",
+    "izitoast": "^1.4.0",
+    "swiper": "^11.1.7",
+    "vite-plugin-env-compatible": "^2.0.1",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  }
+}
