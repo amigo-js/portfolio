@@ -1,22 +1,26 @@
-import { renderReviewsError, renderReviewsSuccess } from './renderReviews.js';
-import Swiper from 'swiper';
-import { Keyboard, Navigation } from 'swiper/modules';
+import { renderReviewsError, renderReviewsSuccess } from "./renderReviews.js";
+import Swiper from "swiper";
+import { Keyboard, Navigation } from "swiper/modules";
 
 export function reviewSection() {
   const reviewsData = [
     {
-      author: 'Antoni Malinowski',
-      avatar_url: '../../img/reviews/antoni_malinowski.jpg',
+      author: "Antoni Malinowski",
+      // avatar_url: "../../img/reviews/antoni_malinowski.jpg",
+      avatar_url: new URL(
+        "../../img/reviews/antoni_malinowski.jpg",
+        import.meta.url
+      ).href,
       review:
-        'Viktor stands out as a dependable and skilled specialist. He consistently exceeds expectations with his attention to detail, timely delivery, and exceptional work ethic.',
+        "Viktor stands out as a dependable and skilled specialist. He consistently exceeds expectations with his attention to detail, timely delivery, and exceptional work ethic.",
     },
   ];
 
-  const swiperReviews = new Swiper('.reviews-swiper', {
+  const swiperReviews = new Swiper(".reviews-swiper", {
     modules: [Navigation, Keyboard],
     navigation: {
-      nextEl: '.reviews-swiper-button-right',
-      prevEl: '.reviews-swiper-button-left',
+      nextEl: ".reviews-swiper-button-right",
+      prevEl: ".reviews-swiper-button-left",
     },
     keyboard: {
       enabled: true,
