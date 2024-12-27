@@ -4,15 +4,17 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import envCompatible from 'vite-plugin-env-compatible';
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ mode }) => {
+  const isProd = mode === 'production';
+
   return {
     define: {
-      [command === 'serve' ? 'global' : '_global']: {},
+      [isProd ? '_global' : 'global']: {},
     },
     root: 'src',
     build: {
+      base: isProd ? '/portfolio/' : './',
       sourcemap: true,
-
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {

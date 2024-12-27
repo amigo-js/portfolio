@@ -1,3 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/portfolio/(.*)",
+      "destination": "/portfolio/$1"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/portfolio/",
+      "statusCode": 301
+    }
+  ]
 }
