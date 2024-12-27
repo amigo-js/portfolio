@@ -25,6 +25,7 @@ export default defineConfig(({ command }) => {
         },
       },
       outDir: '../dist',
+      cssCodeSplit: true,
     },
     plugins: [injectHTML(), FullReload(['./src/**/**.html']), envCompatible()],
     optimizeDeps: {
