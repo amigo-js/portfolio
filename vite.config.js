@@ -2,19 +2,16 @@ import { defineConfig } from 'vite';
 import glob from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
-import envCompatible from 'vite-plugin-env-compatible';
 
-export default defineConfig(({ mode }) => {
-  const isProd = mode === 'production';
-
+export default defineConfig(({ command }) => {
   return {
     define: {
-      [isProd ? '_global' : 'global']: {},
+      [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
     build: {
-      base: isProd ? '/portfolio/' : './',
       sourcemap: true,
+
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
@@ -27,11 +24,10 @@ export default defineConfig(({ mode }) => {
         },
       },
       outDir: '../dist',
-      cssCodeSplit: true,
     },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html']), envCompatible()],
+    plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
     optimizeDeps: {
       entries: [],
-    },
+  }
   };
 });
