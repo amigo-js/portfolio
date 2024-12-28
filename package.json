@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode production",
-    "preview": "vite preview --mode production"
+    "preview": "vite preview --mode production",
+    "test": "test"
   },
   "devDependencies": {
     "glob": "^8.1.0",
