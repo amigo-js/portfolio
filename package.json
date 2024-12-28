@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production",
-    "preview": "vite preview --mode production"
+    "build": "vite build",
+    "preview": "vite preview --base=/portfolio/"
   },
   "devDependencies": {
     "glob": "^8.1.0",
