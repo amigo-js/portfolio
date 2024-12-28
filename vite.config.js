@@ -5,13 +5,11 @@ import FullReload from "vite-plugin-full-reload";
 import envCompatible from "vite-plugin-env-compatible";
 
 export default defineConfig(({ command }) => {
+  const isProduction = command === "build";
   return {
-    define: {
-      [command === "serve" ? "global" : "_global"]: {},
-    },
+    base: isProduction ? "/portfolio/" : "/",
     root: "src",
     build: {
-      base: "/portfolio/",
       sourcemap: true,
       rollupOptions: {
         input: glob.sync("./src/*.html"),
@@ -26,6 +24,10 @@ export default defineConfig(({ command }) => {
       },
       outDir: "../dist",
     },
-    plugins: [injectHTML(), FullReload(["./src/**/**.html"]), envCompatible()],
+    plugins: [
+      injectHTML(),
+      FullReload(["./src/**/**.html"]),
+      envCompatible(),
+    ],
   };
 });
