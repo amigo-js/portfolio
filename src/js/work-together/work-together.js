@@ -25,6 +25,10 @@ export function initWorkTogetherSection() {
     return;
   }
 
+  console.log("Service ID:", serviceId);
+  console.log("Template ID:", templateId);
+  console.log("Public Key:", publicKey);
+
   const labels = {
     addError() {
       elms.successLabel.classList.add("visually-hidden");
