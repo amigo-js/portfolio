@@ -16,43 +16,30 @@ export function initWorkTogetherSection() {
     closeModalButton: document.querySelector(".footer-modal-close-button"),
   };
 
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const serviceId = process.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = process.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.VITE_EMAILJS_PUBLIC_KEY;
 
   if (!serviceId || !templateId || !publicKey) {
     console.error("EmailJS environment variables are missing.");
     return;
   }
 
-  console.log("Service ID:", serviceId);
-  console.log("Template ID:", templateId);
-  console.log("Public Key:", publicKey);
-
-  const labels = {
-    addError() {
-      elms.successLabel.classList.add("visually-hidden");
-      elms.errorLabel.classList.remove("visually-hidden");
-      elms.email.classList.add("input-error");
-      elms.email.classList.remove("input-success");
-    },
-
-    addSuccess() {
-      elms.errorLabel.classList.add("visually-hidden");
-      elms.successLabel.classList.remove("visually-hidden");
-      elms.email.classList.remove("input-error");
-      elms.email.classList.add("input-success");
-    },
-
-    removeBoth() {
-      elms.email.classList.remove("input-success");
-      elms.email.classList.remove("input-error");
-      elms.successLabel.classList.add("visually-hidden");
-      elms.errorLabel.classList.add("visually-hidden");
-    },
-  };
-
   const modals = {
+    open(title, message) {
+      elms.modalTitle.textContent = title;
+      elms.modalMessage.textContent = message;
+
+      elms.modalBackdrop.classList.remove("visually-hidden");
+      elms.modalOverlay.classList.remove("visually-hidden");
+      elms.modalBackdrop.classList.add("is-open");
+      elms.modalOverlay.classList.add("is-open");
+
+      elms.closeModalButton.addEventListener("click", modals.close);
+      elms.modalBackdrop.addEventListener("click", onBackdropClick);
+      document.body.addEventListener("keydown", onBodyPress);
+    },
+
     close() {
       elms.modalOverlay.classList.remove("is-open");
       elms.modalBackdrop.classList.remove("is-open");
@@ -69,25 +56,6 @@ export function initWorkTogetherSection() {
       elms.modalBackdrop.removeEventListener("click", onBackdropClick);
       document.body.removeEventListener("keydown", onBodyPress);
     },
-
-    open(title, message) {
-      elms.modalTitle.textContent = title;
-      elms.modalMessage.textContent = message;
-
-      elms.modalBackdrop.classList.remove("visually-hidden");
-      elms.modalOverlay.classList.remove("visually-hidden");
-      elms.modalBackdrop.classList.add("is-open");
-      elms.modalOverlay.classList.add("is-open");
-
-      elms.closeModalButton.addEventListener("click", modals.close);
-      elms.modalBackdrop.addEventListener("click", onBackdropClick);
-      document.body.addEventListener("keydown", onBodyPress);
-    },
-  };
-
-  const isValidEmail = (email) => {
-    const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    return pattern.test(email.trim());
   };
 
   const onBackdropClick = (event) => {
@@ -100,6 +68,11 @@ export function initWorkTogetherSection() {
     if (event.key === "Escape") {
       modals.close();
     }
+  };
+
+  const isValidEmail = (email) => {
+    const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    return pattern.test(email.trim());
   };
 
   elms.form.addEventListener("submit", async (event) => {
