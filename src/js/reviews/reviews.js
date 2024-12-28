@@ -6,7 +6,6 @@ export function reviewSection() {
   const reviewsData = [
     {
       author: "Antoni Malinowski",
-      // avatar_url: "../../img/reviews/antoni_malinowski.jpg",
       avatar_url: new URL(
         "../../img/reviews/antoni_malinowski.jpg",
         import.meta.url
@@ -52,3 +51,4 @@ export function reviewSection() {
 
   getReviews();
 }
+
