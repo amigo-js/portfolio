@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio FS Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    
+    <script type="module" crossorigin src="/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-ecf58e52.js">
+    <link rel="stylesheet" href="/assets/vendor-213259dc.css">
+    <link rel="stylesheet" href="/assets/index-e23efab2.css">
+  </head>
+  <body>
+    <span class="cursor"></span>
+
+    <header class="header">
+  <div class="header-wrapper container">
+    <a href="./index.html" class="logo">
+      <img
+        src="/assets/viktorA-193a3cf8.jpg"
+        width="80"
+        height="80"
+        alt="A professional"
+      />
+      <p class="logo-text">VAdamski*</p>
+    </a>
+    <div class="navigation">
+      <span class="menu">Menu</span>
+      <nav class="navi">
+        <ul class="nav-wrapper">
+          <li class="nav-item">
+            <a class="nav-link" href="#abouts-me">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="open-menu-btn" type="button" aria-label="Open menu button">
+      <svg class="burger-menu" width="28" height="28">
+        <use href="/assets/icons-1f2c1872.svg#icon-header-menu"></use>
+      </svg>
+    </button>
+    <a class="order-links" href="#order"> Contact me </a>
+  </div>
+</header>
+
+<!--modal window-->
+<div class="backdrop">
+  <div class="modal">
+    <button
+      class="modal-close-btn"
+      type="button"
+      aria-label="Modal close button"
+    >
+      <svg class="close-icon" width="28" height="28">
+        <use href="/assets/icons-1f2c1872.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="navi-modal">
+      <ul class="navi-modal-wrapper">
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#about-me">About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#benefits">Benefits</a>
+        </li>
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="navi-modal-link" href="#faq">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+    <main>
+      <section class="hero">
+  <div class="container">
+    <h1 class="hero-title">
+      Hello, <br />
+      I’m Senior QA Automation Engineer and Fullstack developer with JS Viktor
+      Adamski.
+    </h1>
+    <ul class="hero-list">
+      <li class="hero-item">
+        <a
+          target="_blank"
+          href="https://github.com/amigo-js/portfolio"
+          class="socials"
+          >GitHub</a
+        >
+      </li>
+      <li class="hero-item">
+        <a
+          target="_blank"
+          href="mailto:vadamski7@gmail.com"
+          class="social-email"
+          >vadamski7@gmail.com</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="about-me-accordion" id="abouts-me">
+  <div class="container">
+    <h2 class="visually-hidden">About me accordion</h2>
+    <div class="about-me-description">
+      <ul class="about-me-list">
+        <li class="about-me-item">
+          <div class="about-me-box">
+            <h1 class="about-me-text">
+              I WORK WITH PEOPLE ALL OVER THE WORLD TO ENSURE
+              <span style="color: var(--red)">HIGH-QUALITY SOFTWARE</span>
+              DELIVERY THROUGH COMPREHENSIVE TESTING, AUTOMATION, AND
+              COLLABORATION, WHILE ALSO CREATING FUNCTIONAL WEB APPLICATIONS AS
+              A
+              <span style="color: rgb(153, 153, 153)"
+                >FULL STACK DEVELOPER.</span
+              >
+            </h1>
+          </div>
+        </li>
+        <li class="about-me-item">
+          <div class="about-me-box">
+            <img
+              src="/assets/a-professional-9000afce.jpg"
+              width="343"
+              height="500"
+              alt="A professional"
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul class="acrdn-about-me-container">
+      <li class="acrdn-button-list is-active">
+        <h3 class="acrdn-button-item about-me-acrdn-button">
+          About me
+          <button type="button" class="about-me-acrdn-button">
+            <svg class="icon-about about-me-btn-open visible">
+              <use href="/assets/icons-1f2c1872.svg#icon-arrow-up"></use>
+            </svg>
+            <svg class="icon-about about-me-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="content-about-me is-active">
+          <div class="content-about-me-text">
+            <p class="content-first">
+              I am Viktor Adamski, a talented QA Automation Engineer with
+              extensive expertise in high-quality software delivery. I have an
+              understanding of different programming languages ​​and
+              technologies, always ready to improve my skills. I always follow
+              the latest trends and look for unconventional, creative solutions
+              to problems. I have a high level of analytical skills and am able
+              to effectively solve even the most difficult tasks encountered on
+              the way.
+            </p>
+            <p>
+              Able to work both independently and in a team. I can effectively
+              cooperate with colleagues, exchanging ideas and finding optimal
+              solutions. Professional maturity allows you to calmly cope with
+              challenges and stressful situations, while maintaining a high
+              quality of work. I am always looking for opportunities for
+              self-improvement. I actively study new technologies and practices
+              to stay abreast of the latest innovations. I have a strong
+              understanding of various programming languages, frameworks and
+              architectural concepts that allow me to create efficient and
+              scalable software.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="acrdn-button-list">
+        <h3 class="acrdn-button-item about-me-acrdn-button">
+          Responsibilities
+          <button type="button" class="about-me-acrdn-button">
+            <svg class="icon-about about-me-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-arrow-up"></use>
+            </svg>
+            <svg class="icon-about about-me-btn-close visible">
+              <use href="/assets/icons-1f2c1872.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="content-about-me">
+          <div class="content-about-me-text text-wrap-about">
+            <p>
+              • Front-end, back-end, component, system, system-integration,
+              functional and non-functional testing
+            </p>
+            <p>• Set up automation pipelines</p>
+            <p>• QA team management</p>
+            <p>
+              • Created and maintained release and quality assurance
+              documentation
+            </p>
+            <p>• Delegated testing activities within QA team</p>
+            <p>
+              • Analyzed test results and compiled pre- and post-release reports
+            </p>
+            <p>
+              • Managed manual and automated testing efforts for comprehensive
+              quality assurance
+            </p>
+            <p>• API manual and automation testing</p>
+            <p>
+              • Test strategy, Test Plan and Resource Estimation creation and
+              execution
+            </p>
+            <p>
+              • Functional and Non-functional testing of Web and Mobile
+              applications
+            </p>
+            <p>• Creating web applications as Full Stack Developer with JS</p>
+          </div>
+        </div>
+      </li>
+      <li class="acrdn-button-list">
+        <h3 class="acrdn-button-item about-me-acrdn-button">
+          Education
+          <button type="button" class="about-me-acrdn-button">
+            <svg class="icon-about about-me-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-arrow-up"></use>
+            </svg>
+            <svg class="icon-about about-me-btn-close visible">
+              <use href="/assets/icons-1f2c1872.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <div class="content-about-me">
+          <div class="content-about-me-text text-wrap-about">
+            <p>2024 - Certified Tester Foundation Level - ISTQB</p>
+            <p>
+              2024 - Full Stack Developer JavaScript HTML CSS JavaScript
+              React.js Node.js - GoIT
+            </p>
+            <p>
+              2023 - Advanced JS Software Test Automation Global Mentoring
+              Program - EPAM
+            </p>
+            <p>
+              2008 - 2010 / Enterprise Management - Master’s degree -
+              Jagiellonian University
+            </p>
+            <p>
+              2005 - 2008 / International Economics - Bachelor’s degree -
+              Jagiellonian University
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="about-me-swiper">
+  <div class="container">
+    <div id="circleSlider" class="circle-slider">
+        <ul class="circle-container">
+          <li class="circle">JavaScript</li>
+          <li class="circle">API</li>
+          <li class="circle">Node.js</li>
+          <li class="circle">CI/CD</li>
+          <li class="circle">React</li>
+          <li class="circle">Jmeter</li>
+        </ul>
+      <div class="btn-about-me">
+        <button id="nextButton" class="next-button">
+          <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 4L16 12L8 20" stroke="#3B3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </button>
+      </div>
+  </div>
+    </div> 
+</section>
+
+      <section class="benefits" id="benefits">
+  <div class="container">
+    <h2 class="benefits-title">Benefits of working with me</h2>
+    <div class="list-box">
+      <ul class="benefits-list">
+        <li class="benefits-item">
+          <div class="icon-wrap">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/assets/icons-1f2c1872.svg#icon-user"></use>
+            </svg>
+          </div>
+          <h3 class="benefit-subtitle">Quality Assurance</h3>
+          <p class="benefit-text">
+            Dedicated to ensuring the highest standards through meticulous
+            testing and a focus on software quality.
+          </p>
+        </li>
+        <li class="benefits-item">
+          <div class="icon-wrap">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/assets/icons-1f2c1872.svg#icon-message"></use>
+            </svg>
+          </div>
+          <h3 class="benefit-subtitle">Full Stack developer</h3>
+          <p class="benefit-text">
+            Skilled in both front-end and back-end development, creating robust
+            and user-friendly applications.
+          </p>
+        </li>
+        <li class="benefits-item">
+          <div class="icon-wrap">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/assets/icons-1f2c1872.svg#icon-brush"></use>
+            </svg>
+          </div>
+          <h3 class="benefit-subtitle">Leadership</h3>
+          <p class="benefit-text">
+            Experienced in leading teams, delegating tasks, and ensuring the
+            successful delivery of high-quality projects.
+          </p>
+        </li>
+        <li class="benefits-item">
+          <div class="icon-wrap">
+            <svg class="benefit-icon" width="24" height="24">
+              <use href="/assets/icons-1f2c1872.svg#icon-time"></use>
+            </svg>
+          </div>
+          <h3 class="benefit-subtitle">Innovation</h3>
+          <p class="benefit-text">
+            Passionate about following the latest trends and implementing
+            creative solutions to bring projects to life.
+          </p>
+        </li>
+      </ul>
+      <a class="order-link" href="#order">Contact me</a>
+    </div>
+  </div>
+</section>
+
+      <section class="projects-container" id="projects">
+  <div class="container">
+    <h2 class="projects">Projects</h2>
+    <div class="swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide project-slide">
+          <!-- Slide 1 -->
+          <div class="wrap_1">
+            <ul class="wrap_text">
+              <li class="first text">
+                <p>#cypress</p>
+              </li>
+              <li class="second text">
+                <p>#js</p>
+              </li>
+              <li class="third text">
+                <p>#axios</p>
+              </li>
+              <li class="fourth text">
+                <p>#git</p>
+              </li>
+            </ul>
+            <h3 class="title">
+              EPAM<br />
+              London Stock Exchange project
+            </h3>
+
+            <a
+              class="btn"
+              href="https://github.com/SandraHotsyn/P09-PortfolioFSDev"
+              target="_blank"
+              >See project</a
+            >
+          </div>
+          <div class="wrap_2">
+            <picture>
+              <img
+                class="project-img"
+                src="/assets/epam-c30c7659.jpg"
+                alt="Expand your mind"
+                width="311"
+                height="195"
+              />
+            </picture>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <!-- Slide 2 -->
+          <div class="wrap_1">
+            <ul class="wrap_text">
+              <li class="first text">
+                <p>#playwright</p>
+              </li>
+              <li class="second text">
+                <p>#js</p>
+              </li>
+              <li class="third text">
+                <p>#graphql</p>
+              </li>
+              <li class="fourth text">
+                <p>#lighthouse</p>
+              </li>
+            </ul>
+            <h3 class="title">
+              Mirumee<br />
+              Breitling project
+            </h3>
+            <a
+              class="btn"
+              href="https://github.com/SandraHotsyn/P09-PortfolioFSDev"
+              target="_blank"
+              >See project</a
+            >
+          </div>
+          <div class="wrap_2">
+            <picture>
+              <img
+                class="project-img"
+                src="/assets/mirumee-471c97af.jpg"
+                alt="Expand your mind"
+                width="311"
+                height="195"
+              />
+            </picture>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <!-- Slide 3 -->
+          <div class="wrap_1">
+            <ul class="wrap_text">
+              <li class="first text">
+                <p>#cypress</p>
+              </li>
+              <li class="second text">
+                <p>#js</p>
+              </li>
+              <li class="third text">
+                <p>#postman</p>
+              </li>
+              <li class="fourth text">
+                <p>#storybook</p>
+              </li>
+            </ul>
+            <h3 class="title">
+              Volt.io<br />
+              Fintech project
+            </h3>
+            <a
+              class="btn"
+              href="https://github.com/SandraHotsyn/P09-PortfolioFSDev"
+              target="_blank"
+              >See project</a
+            >
+          </div>
+          <div class="wrap_2">
+            <picture>
+              <img
+                class="project-img"
+                src="/assets/volt-77517a3c.jpg"
+                alt="Expand your mind"
+                width="311"
+                height="195"
+              />
+            </picture>
+            <img />
+          </div>
+        </li>
+      </ul>
+      <div class="wrap-btn">
+        <button class="swiper-button-prev">
+          <svg class="benefit-icon project-icon" width="24" height="24">
+            <use href="/assets/icons-1f2c1872.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next">
+          <svg class="benefit-icon project-icon" width="24" height="24">
+            <use href="/assets/icons-1f2c1872.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="faq-container" id="faq">
+  <div class="container">
+    <h2 class="faq-title">FAQ</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <h3 class="faq-header">
+          What programming languages are most often used in your projects?
+          <button class="faq-btn-trigger">
+            <svg class="faq-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-up"></use>
+            </svg>
+            <svg class="faq-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="faq-content">
+          In my work, I primarily use JavaScript and TypeScript, as they are
+          powerful for both automation testing and full stack development.
+          Additionally, I leverage Python for creating efficient automation
+          scripts, and have experience with Java for specific testing tasks or
+          integrations when required.
+        </p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-header">
+          What industries or sectors have you worked with in the past?
+          <button class="faq-btn-trigger">
+            <svg class="icon faq-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-up"></use>
+            </svg>
+            <svg class="icon faq-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="faq-content">
+          I have significant experience in the finance sector, including
+          critical projects like the London Stock Exchange, where reliability,
+          precision, and security are key. I've also worked in e-commerce,
+          ensuring high-quality customer-facing applications, and in software
+          development, focusing on scalable and maintainable solutions across
+          various domains.
+        </p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-header">
+          What tools or technologies do you use for project management and
+          communication?
+          <button class="faq-btn-trigger">
+            <svg class="icon faq-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-up"></use>
+            </svg>
+            <svg class="icon faq-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="faq-content">
+          I utilize Jira for task and issue tracking and Slack or Microsoft
+          Teams for effective team communication. For version control and
+          collaboration, I rely on Git, paired with GitHub or GitLab, and
+          frequently integrate these with CI/CD tools to maintain a seamless
+          development and testing workflow. Confluence is another key tool I use
+          for documenting processes and sharing knowledge across teams.
+        </p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-header">
+          What types of technologies and frameworks do you use in your projects?
+          <button class="faq-btn-trigger">
+            <svg class="icon faq-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-up"></use>
+            </svg>
+            <svg class="icon faq-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="faq-content">
+          On the QA automation side, I specialize in tools like Cypress,
+          Playwright, and Selenium, using them to develop robust, scalable
+          testing solutions. For full stack development, I work with React for
+          front-end development and Node.js for back-end services. When it comes
+          to APIs, I utilize tools like Postman, GraphQL.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <h3 class="faq-header">
+          How do you ensure the quality of your applications?
+          <button class="faq-btn-trigger">
+            <svg class="icon faq-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-up"></use>
+            </svg>
+            <svg class="icon faq-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="faq-content">
+          I ensure quality through a multi-layered approach, including
+          functional, non-functional, and regression testing. I automate
+          repetitive test cases using tools like Cypress or Playwright, while
+          employing manual exploratory testing for user experience validation.
+          Additionally, I integrate API testing, and visual testing into the QA
+          pipeline. By collaborating with developers and stakeholders, I
+          proactively identify and resolve potential issues early in the
+          development cycle.
+        </p>
+      </li>
+      <li class="faq-item">
+        <h3 class="faq-header">
+          How do you stay updated with the latest technologies and trends?
+          <button class="faq-btn-trigger">
+            <svg class="icon faq-btn-open">
+              <use href="/assets/icons-1f2c1872.svg#icon-up"></use>
+            </svg>
+            <svg class="icon faq-btn-close">
+              <use href="/assets/icons-1f2c1872.svg#icon-down"></use>
+            </svg>
+          </button>
+        </h3>
+        <p class="faq-content">
+          I stay current by actively participating in QA and development
+          communities, attending webinars, and reading industry-leading blogs
+          and resources. I also engage in hands-on experimentation with new
+          tools and frameworks, particularly in JavaScript and Python
+          ecosystems, to ensure I stay ahead of technological advancements.
+          Continuous learning is part of my routine, and I often complete
+          certifications or advanced courses to refine my skills further.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="covers">
+  <div class="covers-container">
+    <h2 hidden>section Covers</h2>
+    <ul class="covers-list">
+      <li class="covers-foto">
+        <img src="/assets/image_1-0f2d77c1.jpg" alt="10" width="544" height="314" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_2-960d4aae.jpg" width="544" height="314" alt="7" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_3-c0039e1b.jpg" width="544" height="314" alt="11" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_4-5ae3cfb2.jpg" width="544" height="314" alt="1" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_5-3ee73836.jpg" width="544" height="314" alt="8" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_6-2cb30bb1.jpg" width="544" height="314" alt="9" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_7-3458c05d.jpg" width="544" height="314" alt=" 4" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_8-ba31bd41.jpg" width="544" height="314" alt="5" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_9-8292a2b3.jpg" width="544" height="314" alt="12" />
+      </li>
+
+      <li class="covers-foto">
+        <img
+          src="/assets/volt-77517a3c.jpg"
+          alt="10"
+          width="544"
+          height="314"
+        />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/mirumee-471c97af.jpg" width="544" height="314" alt="7" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/epam-c30c7659.jpg" width="544" height="314" alt="1" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_1-0f2d77c1.jpg" width="544" height="314" alt="1" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_2-960d4aae.jpg" width="544" height="314" alt="8" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_3-c0039e1b.jpg" width="544" height="314" alt="9" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_4-5ae3cfb2.jpg" width="544" height="314" alt=" 4" />
+      </li>
+      <li class="covers-foto">
+        <img src="/assets/image_5-3ee73836.jpg" width="544" height="314" alt="5" />
+
+        <img src="/assets/image_6-2cb30bb1.jpg" width="544" height="314" alt="12" />
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="reviews">
+  <div class="container">
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="reviews-swiper">
+      <ul class="reviews-list swiper-wrapper"></ul>
+      <div class="reviews-swiper-arrows-container">
+        <button
+          type="button"
+          class="reviews-swiper-button reviews-swiper-button-left"
+        >
+          <svg class="benefit-icon" width="24" height="24">
+            <use href="/assets/icons-1f2c1872.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="reviews-swiper-button reviews-swiper-button-right"
+        >
+          <svg class="benefit-icon" width="24" height="24">
+            <use href="/assets/icons-1f2c1872.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div class="scroll-up">
+  <svg class="icon icon-circle-up animate__animated animate__rotateIn">
+    <use href="/assets/icons-1f2c1872.svg#icon-circle-up"></use>
+  </svg>
+</div>
+
+    </main>
+    <footer>
+      <section class="work-together" id="order">
+  <div class="container">
+    <h2 class="footer-title">
+      <span class="footer-title-upper-part"
+        >Let&rsquo;s <span class="footer-title-accent">work</span></span
+      >
+      <span class="footer-title-lower-part">together</span>
+    </h2>
+    <img
+      src="/assets/viktorA-193a3cf8.jpg"
+      alt="ViktorA"
+      class="footer-title-image"
+      width="44"
+      height="44"
+      loading="lazy"
+    />
+    <form class="footer-form">
+      <div class="footer-input-container">
+        <input
+          class="footer-input footer-email-input"
+          type="email"
+          name="email"
+          placeholder="clients@gmail.com"
+          spellcheck="false"
+          autocomplete="off"
+        />
+        <p class="text-valid">Succes!</p>
+        <p class="text-invalid">Invalid email, try again</p>
+      </div>
+      <div class="footer-input-container">
+        <input
+          type="text"
+          class="footer-input footer-comments-input"
+          name="comments"
+          placeholder="comments"
+          spellcheck="false"
+          autocomplete="off"
+        />
+      </div>
+      <button class="footer-send-button" type="submit" aria-label="send form">
+        Send
+      </button>
+    </form>
+    <address class="footer-address">
+      <a
+        href="mailto:vadamski7@gmail.com"
+        class="footer-link"
+        aria-label="send email"
+        >vadamski7@gmail.com</a
+      >
+      <a
+        href="tel:+48 608 828 955"
+        class="footer-link"
+        aria-label="call phone number"
+        >+48 608 828 955</a
+      >
+    </address>
+  </div>
+  <div class="footer-bg-image"></div>
+</section>
+<div class="footer-modal-backdrop visually-hidden">
+  <div class="footer-modal-overlay visually-hidden">
+    <button
+      class="footer-modal-close-button"
+      type="button"
+      name="close_button"
+      aria-label="close modal window"
+    >
+      <svg class="footer-modal-close-button-icon" height="22" width="22">
+        <use href="/assets/icons-1f2c1872.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h3 class="footer-modal-title" id="title">footer modal</h3>
+    <p class="footer-modal-description" id="message"></p>
+  </div>
+</div>
+
+    </footer>
+    
+  </body>
+</html>
