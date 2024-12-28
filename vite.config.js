@@ -27,11 +27,7 @@ export default defineConfig(({ command }) => {
       },
       outDir: "../dist",
     },
-    plugins: [
-      injectHTML(),
-      FullReload(["./src/**/**.html"]),
-      envCompatible(),
-    ],
+    plugins: [injectHTML(), FullReload(["./src/**/**.html"]), envCompatible()],
     optimizeDeps: {
       entries: [],
     },
